@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    --c1: hsl(31, 77%, 52%);
+    --c2: hsl(184, 100%, 22%);
+    --c3: hsl(179, 100%, 13%);
+    --para: hsla(0, 0%, 100%, 0.75);
+    --bg: hsl(0, 0%, 95%);
+    --heads: hsl(0, 0%, 95%);
+    --btns: hsl(0, 0%, 95%);
+    --rad: 0.5rem;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    padding: 5rem 0.5rem; 
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: var(--heads);
+    font-size: 2.5rem;
+}
+
+p {
+    color: var(--para);
+    line-height: 1.5;
+}
+
+button {
+    background: var(--btns);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    border: 5px solid var(--btns);
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card {
+    width: 22rem;
+    height: 29rem;
+    padding: 3rem;
+}
+
+.card h1{
+    font-family: 'Big Shoulders Display', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.card button {
+    transition: all 0.2s ease-in;
+}
+
+.card button:active, .card button:hover {
+    color: var(--btns);
+}
+
+.sedans {
+    background: var(--c1);
+    border-radius: var(--rad) var(--rad) 0 0;
+}
+
+.sedans button {
+    color: var(--c1);
+}
+
+.sedans button:hover, .sedans button:active {
+    background: var(--c1);
+}
+
+.suvs {
+    background: var(--c2);
+}
+
+.suvs button {
+    color: var(--c2);
+}
+
+.suvs button:hover, .suvs button:active {
+    background: var(--c2);
+}
+
+.luxury {
+    background: var(--c3);
+    border-radius: 0 0 var(--rad) var(--rad);
+}
+
+.luxury button {
+    color: var(--c3);
+    margin-top: 2.5rem;
+}
+
+.luxury button:hover, .luxury button:active {
+    background: var(--c3);
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1000px) and (min-height: 900px),
+ (min-width: 1000px) {
+    body {
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        height: 35rem;
+    }
+
+    .sedans {
+        border-radius: var(--rad) 0 0 var(--rad);
+    }
+
+    .sedans button, .suvs button {
+        margin-top: 2.5rem;
+    }
+
+    .luxury {
+        border-radius: 0 var(--rad) var(--rad) 0;
+    }
+}
+
