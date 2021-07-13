@@ -50,6 +50,7 @@ button {
     width: 22rem;
     height: 29rem;
     padding: 3rem;
+    transition: all 100ms ease-in;
 }
 
 .card h1{
@@ -58,7 +59,7 @@ button {
 }
 
 .card button {
-    transition: all 0.2s ease-in;
+    transition: all 300ms linear;
 }
 
 .card button:active, .card button:hover {
@@ -74,10 +75,6 @@ button {
     color: var(--c1);
 }
 
-.sedans button:hover, .sedans button:active {
-    background: var(--c1);
-}
-
 .suvs {
     background: var(--c2);
 }
@@ -85,11 +82,6 @@ button {
 .suvs button {
     color: var(--c2);
 }
-
-.suvs button:hover, .suvs button:active {
-    background: var(--c2);
-}
-
 .luxury {
     background: var(--c3);
     border-radius: 0 0 var(--rad) var(--rad);
@@ -100,8 +92,21 @@ button {
     margin-top: 2.5rem;
 }
 
+.sedans button:hover, .sedans button:active {
+    background: var(--c1);
+}
+
+.suvs button:hover, .suvs button:active {
+    background: var(--c2);
+}
+
 .luxury button:hover, .luxury button:active {
     background: var(--c3);
+}
+
+.card:hover, .card:active {
+    transform: scale(1.1);
+    border-radius: var(--rad);
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1000px) and (min-height: 900px),
